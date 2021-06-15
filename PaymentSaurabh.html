@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+<title>PAYMENT - PHONE SHOP</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+dd { margin-left: 75px; }
+#mode_margin { margin-left:0px; }
+</style>
+</head>
+<body style="background-color:skyblue;">
+
+    <!--header-->
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+            <img src="images/LOGO.png" width="170px" alt="LOGO" >
+          </a>
+      </div>
+      <nav>
+        <ul id="menuitems">
+          <li><a href="index.html"> HOME</a></li>
+          <li><a href="product.html" > PRODUCTS </a></li>
+          <li><a href="productdetail.html" > PRODUCT DETAILS </a></li>
+          <li><a href="LoginVaibhav.html"> LOGIN </a></li>
+          <li><a href="AboutMeghraj.html"> ABOUT </a></li>
+          <li><a href="PaymentSaurabh.html"> PAYMENT </a></li>
+        </ul>
+      </nav>
+      <a href=""><i class="fa fa-shopping-cart fa-2x"></i></a>
+      <img src="images/menuicon.png" onclick="menutoggle()" class="menuicon"></i>
+    </div>
+  </div>
+
+
+    <fieldset class="paymethodfieldset">
+        <dl> 
+        <dt><b>Client Name:</b>  </dt>
+        <dd>
+            <input id="client_no" type="text" name="client_no" size="30"/>
+        </dd>      
+        <dt><b>Mobile Number:</b> </dt>           
+        <dd>
+            <input id="mobile no" name="mobile no" type="text" size="10"/>
+        </dd>                            
+        <dt><b>Collection Amount:</b></dt>            
+        <dd>
+            <input id="collection_amount" type="text" name="collection_amount" size="30"/>            
+        </dd>                      
+        <div>
+            <h1>         
+                <input type=radio name=formOfPayment id=formOfPayment value=CreditCard />                                
+                    Pay by Credit Card -</h1>            
+        </div>     
+        <dt><b>Card Number:</b></dt>
+        <dd>
+            <input type="text" id="cc_no" name="cc_no" size="30"/>
+            <span id="err_cc_no" class="jserror"> </span>
+        </dd>           
+        <dt><b>Expiry Date:</b></dt>
+        <dd>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><select id="cc_exp_mm" name="cc_exp_mm">
+                            <option value="">Month</option>
+                            <option value="1" selected="selected">January</option>                                
+                            <option value="2">February</option>                             
+                            <option value="3">March</option>                          
+                            <option value="4">April</option>                          
+                            <option value="5">May</option>                           
+                            <option value="6">June</option>                           
+                            <option value="7">July</option>                          
+                            <option value="8">August</option>                            
+                            <option value="9">September</option>                    
+                            <option value="10">October</option>                             
+                            <option value="11">November</option>                            
+                            <option value="12">December</option>                            
+                        </select></td>                        
+                    <td width="20">&nbsp;</td>                        
+                    <td><select id="cc_exp_yyyy" name="cc_exp_yyyy">
+<option value="">Month</option>
+                            <option value="2016" selected="selected">2016</option>                                
+                            <option value="2017">2017</option>                             
+                            <option value="2018">2018</option>                          
+                            <option value="2019">2019</option>                          
+                            <option value="2020">2020</option>                           
+                            <option value="2021">2021</option>                           
+                            <option value="2022">2022</option>                          
+                            <option value="2023">2023</option>                            
+                            <option value="2024">2024</option>                    
+                            <option value="2025">2025</option>                             
+                            <option value="2026">2026</option>                            
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>                            
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>                        
+                    </td>                    
+                </tr>                
+            </table>            
+        </dd>
+        <dt><b>CVV:</b>(Enter 3-digit no.printed on the back side of card)</dt>
+        <dd>
+            <input id="cvv" type="text" size="3" name="cvv" size="3"/>
+        </dd>
+        </dl>    
+</fieldset>    
+<fieldset >
+    <dl id="payMethodACH" >
+                <div class="Section_Header">                
+            <h1>                    
+                <input type=radio name=formOfPayment id=formOfPayment value=ACH />                    
+                Pay by Account -</h1>            
+        </div>   
+        <dt><b>A/C Holder:</b></dt>
+        <dd>                
+            <input type="text" id="account_holder_name" name="account_holder_name" size="15"/>            
+        </dd>                     
+        <dt><b>IFSC CODE:</b></dt>
+        <dd>                
+            <input type="text" id="bank_IFSC_code" name="bank_IFSC_CODE" size="15"/>            
+        </dd>            
+        <dt><b>Account Number:</b></dt>           
+        <dd>                
+            <input type="text" id="bank_acct_num" name="bank_acct_num" size="14" />            
+        </dd>        
+    </dl>    
+           </div>           
+        </dt>        
+    </dl>    
+</fieldset>    
+<fieldset>       
+     <dl>            
+        <dd class="button">                
+            <input type="submit" name="submitPayment" id="submitPayment" value="Submit" />            
+        </dd>        
+    </dl>    
+</fieldset>
+</form>
+</div>
+
+ <!-------footer------->
+ <br><br>
+ <div class="footer">
+   <div class="container">
+     <div class="row">
+       <div class="footer-col1">
+         <h3>Download app</h3>
+         <a href=""><p>Download our app for android and ios mobile users</p></a>  
+       </div>
+       <div class="footer-col2">
+         <img src="images/LOGO.png" >
+         <p>Find it, love it, buy it.</p>
+       </div>
+       <div class="footer-col3">
+         <h3>Useful Links</h3>
+         <ul>
+           <li>Coupons</li>
+           <li>Blog Post</li>
+           <li>Return Policy</li>
+           <li>Join affliate</li>
+         </ul>
+       </div>
+       <div class="footer-col4">
+         <h3>Follow Us</h3>
+         <ul>
+           <li>Instagram</li>
+           <li>Facebook</li>
+           <li>Twitter</li>
+           <li>Youtube</li>
+         </ul>
+       </div>
+     </div>
+     <hr>
+     <a href="">
+     <p class="copy">Copyright Vijay Shete</p>
+     </a>
+   </div>
+ </div>
+
+
+</body>
+</html>
